@@ -49,22 +49,22 @@ function genarate(
   if (includeSymbols) {
     symbols += "!@#$%^&*()_+~`|}{[]:;?><,./-=";
     requiredLetters.push("symbols");
-    count++;
+    // count++;
   }
   if (includeLower) {
     symbols += "abcdefghijklmnopqrstuvwxyz";
     requiredLetters.push("lowercase");
-    count++;
+    // count++;
   }
   if (includeUpper) {
     symbols += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     requiredLetters.push("uppercase");
-    count++;
+    // count++;
   }
   if (includeNumber) {
     symbols += "0123456789";
     requiredLetters.push("number");
-    count++;
+    // count++;
   }
   count = 0;
   let password = "";
@@ -92,21 +92,25 @@ function genarate(
   }
 
   generator.value = password;
-  // check(checkboxes);
+  check(checkboxes);
   return password;
 }
 
-// function check(inps) {
-//   for (let i = 0; i < inps.length; i++) {
-//     count++;
-//     if (count == 1) {
-//       strengthText.innerHTML = "TOO WEAK!";
-//     } else if (count == 2) {
-//       strengthText.innerHTML = "WEAK";
-//     } else if (count == 2) {
-//       strengthText.innerHTML = "MEDIUM";
-//     } else if (count == 3) {
-//       strengthText.innerHTML = "STRONG";
-//     }
-//   }
-// }
+function check(inps) {
+  for (let i = 0; i < inps.length; i++) {
+    if (inps[i].checked) {
+      count++;
+
+      if (count === 1) {
+        strengthText.innerHTML = "TOO WEAK!";
+      } else if (count === 2) {
+        strengthText.innerHTML = "WEAK";
+      } else if (count === 3) {
+        strengthText.innerHTML = "MEDIUM";
+      } else if (count === 4) {
+        strengthText.innerHTML = "STRONG";
+      }
+    }
+  }
+  console.log(count);
+}
