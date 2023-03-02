@@ -85,11 +85,17 @@ input[type=checkbox] {
 .strength p{
   font-size: 18px;
   color: #817D92;
+  width: 150px;
 }
 .strength h6{
   font-weight: 700;
    font-size: 24px;
    color: #E6E5EA;
+}
+.strength div{
+  width: 10px;
+  height: 28px;
+  border: 2px solid #E6E5EA;
 }
 button {
   width: 476px;
@@ -101,4 +107,9 @@ button {
   font-size: 18px;
   color: #24232C;
   cursor: pointer;
+}
+.pLength{
+  font-weight: 700;
+font-size: 32px;
+color: #A4FFAF;
 }
