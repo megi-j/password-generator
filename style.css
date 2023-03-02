@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&display=swap');
+html{
+  font-family: 'JetBrains Mono';
+}
 .container{
   width: 100vw;
   height: 100vh;
@@ -16,6 +20,21 @@ color: #817D92;
   width: 540px;
   height: 80px;
   background: #24232C;
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.generate-password input{
+  border: none;
+  background: none;
+  outline: none;
+  font-weight: 700;
+  font-size: 32px;
+  color: #E6E5EA;
+}
+.generate-password img{
+  cursor: pointer;
 }
 main{
   width: 540px;
@@ -44,7 +63,7 @@ input[type=range]::-moz-range-thumb {
   background-color: #A4FFAF; /* change color here */
 }
 .wrapper {
-  width: 43%;
+ 
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -52,4 +71,34 @@ input[type=range]::-moz-range-thumb {
 input[type=checkbox] {
   width:20px;
   height:20px;
+}
+.strength{
+ width: 476px;
+ height: 72px;
+ background: #18171F;
+ margin: 0 auto;
+ font-weight: 700;
+ display: flex;
+ justify-content: space-around;
+ align-items: center;
+}
+.strength p{
+  font-size: 18px;
+  color: #817D92;
+}
+.strength h6{
+  font-weight: 700;
+   font-size: 24px;
+   color: #E6E5EA;
+}
+button {
+  width: 476px;
+  height: 65px;
+  background: #A4FFAF;
+  display: block;
+  margin: 0 auto;
+  font-weight: 700;
+  font-size: 18px;
+  color: #24232C;
+  cursor: pointer;
 }
